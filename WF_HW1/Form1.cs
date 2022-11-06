@@ -35,5 +35,11 @@ namespace WF_HW1
             Form4 form4 = new Form4();
             form4.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form5 form5 = new Form5();
+            form5.ShowDialog();
+        }
     }
 }
