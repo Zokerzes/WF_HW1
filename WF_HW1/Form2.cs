@@ -22,9 +22,10 @@ namespace WF_HW1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(fio);
-            MessageBox.Show(str);
-            MessageBox.Show(str1);
+            float AverageCount =(fio.Length + str.Length + str1.Length)/3;
+            MessageBox.Show(fio, "MessageBox1");
+            MessageBox.Show(str, "MessageBox2");
+            MessageBox.Show(str1,$"MessageBox3: среднее колличество символов на окне {AverageCount.ToString()}");
         }
     }
 }
