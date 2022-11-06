@@ -46,6 +46,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 211);
             this.Controls.Add(this.panel1);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 250);
             this.MinimizeBox = false;
