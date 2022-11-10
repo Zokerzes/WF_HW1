@@ -47,5 +47,11 @@ namespace WF_HW1
             Form6 form6 = new Form6();
             form6.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form7 form7 = new Form7();
+            form7.ShowDialog();
+        }
     }
 }
