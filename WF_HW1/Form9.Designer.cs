@@ -501,6 +501,7 @@
             this.toPay.TabIndex = 0;
             this.toPay.Text = "Оплатить";
             this.toPay.UseVisualStyleBackColor = true;
+            this.toPay.Click += new System.EventHandler(this.toPay_Click);
             // 
             // Form9
             // 

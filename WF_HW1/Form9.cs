@@ -21,15 +21,32 @@ namespace WF_HW1
             comboBox1.SelectedIndex = 0;
             volumeGasTextBox10.Enabled = true;
             summGastextBox11.Enabled = false;
+            volumeGasTextBox10.Text = "0";
+            summGastextBox11.Text = "0";
             PriceAddIsert();
         }
-         private void PriceAddIsert()
+       private void reset()
         {
+            this.volumeGas = 0;
+            this.payGas = 0;
+            this.payAdd = 0;
+            this.comboBox1.SelectedIndex = 0;
+            this.volumeGasTextBox10.Enabled = true;
+            this.summGastextBox11.Enabled = false;
+            this.Add0checkBox1.Checked = false;
+            this.Add1checkBox2.Checked = false;
+            this.Add2checkBox3.Checked = false;
+            this.Add3checkBox4.Checked = false;
+            this.volumeGasTextBox10.Text = "0";
+            this.summGastextBox11.Text = "0";
+        } 
+       private void PriceAddIsert()
+       {
             priceAdd0textBox2.Text = dateStor.priceAdd[0].ToString();
             priceAdd1textBox3.Text = dateStor.priceAdd[1].ToString();
             priceAdd2textBox4.Text = dateStor.priceAdd[2].ToString();
             priceAdd3textBox5.Text = dateStor.priceAdd[3].ToString();
-        }
+       }
         private void volumeGasTextBox10_TextChanged(object sender, EventArgs e)
         {
             volumeGas = Convert.ToDouble(volumeGasTextBox10.Text);
@@ -107,6 +124,7 @@ namespace WF_HW1
             total();
         }
 
+
         private void numberAdd0textBox9_TextChanged(object sender, EventArgs e)
         {
             payAdd += Convert.ToDouble(numberAdd0textBox9.Text) * dateStor.priceAdd[0];
@@ -137,6 +155,14 @@ namespace WF_HW1
             }
             priceGasText.Text = litrGasPrace.ToString();
 
+        }
+        private void toPay_Click(object sender, EventArgs e)
+        {
+            total();
+            DialogResult result = MessageBox.Show($"общая стоимость {totalLabel10.Text} " +
+                $"\nзавершить операцию?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.OK) reset();
+            
         }
     }
 }
